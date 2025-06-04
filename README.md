@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Draggable User Cards - Next.js App
 
-## Getting Started
+This project is a **Next.js 13+ App Router** application that showcases a grid of **draggable user profile cards**. Built using **TypeScript**, **Tailwind CSS**, and the **@dnd-kit** drag-and-drop library.
 
-First, run the development server:
+## ✨ Features
+
+- Responsive grid layout of user profile cards
+- Drag-and-drop functionality to reorder cards
+- Smooth animations and blur effects
+- Modular component structure
+
+## 📦 Tech Stack
+
+- [Next.js](https://nextjs.org/) (App Router)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [@dnd-kit](https://dndkit.com/) for drag-and-drop
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   └── page.tsx               # Entry point for the page
+├── components/
+│   ├── UserCard.tsx           # Single draggable card component
+│   ├── UserCardGrid.tsx       # Drag-and-drop grid container
+│   └── users.ts               # Static user data
+public/
+└── avatar1.jpg ... avatar8.jpg # User profile images
+```
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/draggable-user-cards.git
+cd draggable-user-cards
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit `http://localhost:3000` to view the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🧑‍🎨 Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Change User Data:** Edit the array in `src/components/users.ts`
+- **Replace Images:** Put your images in `public/` and update paths in `users.ts`
+- **Tailwind Styling:** Modify styles directly in `UserCard.tsx` or `UserCardGrid.tsx`
 
-## Learn More
+## 📌 Notes
 
-To learn more about Next.js, take a look at the following resources:
+- Works best in modern browsers that support `backdrop-blur` CSS.
+- This app uses `use client` directive to enable drag interactions in the browser.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📄 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT License. Feel free to use and adapt for your own projects.
