@@ -1,4 +1,3 @@
-// __tests__/UserCardGrid.test.tsx
 import UserCardGrid from '@/components/UserCardGrid';
 import { users } from '@/components/users';
 import '@testing-library/jest-dom';
